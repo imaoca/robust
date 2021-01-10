@@ -15,6 +15,8 @@ Node A and Node B are connected by a faulty LAN cable.
 Transfer files from node A to B or node B to A.
 Compete for the number of error-free file transfers.
 
+![](img/fig1.png) 
+
 # What is a LAN cable with a  failure
 By using Jamming Machine, LAN cable(10BASE-T) causes a pseudo failure.
 The Jamming Machine is located between LAN cables and interferes with communication by injecting electrical noise into the cables.
