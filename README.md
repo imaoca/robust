@@ -32,7 +32,7 @@ We have prepared a remote server that causes a pseudo failure on LAN.
 Nodes are constructed by two Raspberry Pi-2.  
 You can participate in the contest by logging in with SSH etc.  
 The following languages ​​are available that implement the protocol.  
-cc version 8.3.0(Raspbian 8.3.0-6+rpi1)  
+gcc version 8.3.0(Raspbian 8.3.0-6+rpi1)  
 go version go1.15.3 linux/arm  
 Python 2.7.16  
 Python 3.7.3  
@@ -52,9 +52,9 @@ After the time limit, we are checking the files that has been saved inside the r
   
 \+ 10pts per correct file  
   
--10pts per file containing errors  
+\- 10pts per file containing errors  
   
--5pts per duplicate file (files with equal content)  
+\- 5pts per duplicate file (files with equal content)  
 
 # Show Time (time table assuming for 6 teams)
 
@@ -64,7 +64,7 @@ After the time limit, we are checking the files that has been saved inside the r
 [2min] Operator preparation  
 [4min] Start of competition  
 [6min] Presentation of algorithm (ranking update behind the scenes & operator cleans up)  
-[6min]Q&A  
+[6min] Q&A  
 [5min] Result announcement & awards ceremony
 
 # Trial site SSH accounts
