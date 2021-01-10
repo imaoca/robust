@@ -31,12 +31,13 @@ The noise pattern and timing are programmable and this time adjusted to about 50
 We have prepared a remote server that causes a pseudo failure on LAN.   
 Nodes are constructed by two Raspberry Pi-2.  
 You can participate in the contest by logging in with SSH etc.  
-The following languages ​​are available that implement the protocol.  
-gcc version 8.3.0(Raspbian 8.3.0-6+rpi1)  
-go version go1.15.3 linux/arm  
-Python 2.7.16  
-Python 3.7.3  
-Rust  
+The following languages ​​are usable to implement the protocol.  
+
+- gcc version 8.3.0(Raspbian 8.3.0-6+rpi1)  
+- go version go1.15.3 linux/arm  
+- Python 2.7.16  
+- Python 3.7.3  
+- Rust  
 
 # Diagram of trial site
 
