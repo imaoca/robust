@@ -36,6 +36,7 @@ Rust
 # Diagram of trial site
 
 # Photo of Robust Protocol Challenge trial site
+![](img/fig2.png)
 
 # Scoring method
 After the time limit, we are checking the files that has been saved inside the receiving side. Scoring will be done as follows.
