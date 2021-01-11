@@ -41,7 +41,7 @@ The following languages ​​are usable to implement the protocol.
 
 # Diagram of trial site
 
-ToDo...
+![](img/fig4.png) 
 
 # Photo of Robust Protocol Challenge trial site
 
