@@ -3,7 +3,7 @@
 ## GCC 2021 Online  
 ### Speaker
 Michihiro Imaoka (Hiro) JP  
-@imaoka  
+@imaoca  
 imaoca@gmail.com  
 https://www.facebook.com/imaoka.micihihiro/
 
