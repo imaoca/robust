@@ -1,14 +1,17 @@
 # Introduction of Robust Protocol Open Challenge
 
 ## GCC 2021 Online  
+
 ### Speaker
+
 Michihiro Imaoka (Hiro) JP  
 @imaoca  
 imaoca@gmail.com  
 https://www.facebook.com/imaoka.micihihiro/
 
-### Tutors
-Yuya Tsuru<br>
+### TAs
+
+Yuya Tsuru  
 Naoki Takayama
 
 # Background
