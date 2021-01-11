@@ -45,7 +45,7 @@ The following languages ​​are usable to implement the protocol.
 - go version go1.15.3 linux/arm  
 - Python 2.7.16  
 - Python 3.7.3  
-- Rust  
+- Rust 
 
 # Diagram of trial site
 
@@ -65,16 +65,17 @@ After the time limit, we are checking the files that has been saved inside the r
   
 \- 5pts per duplicate file (files with equal content)  
 
-# Show Time (time table assuming for 6 teams)
+# Show Time (time table assuming for 8 teams)
 
 [3hour = 180min]  
-[5min] Opening  
-[20min / 1 team] 8 teams  
-[2min] Operator preparation  
-[4min] Start of competition  
-[6min] Presentation of algorithm (ranking update behind the scenes & operator cleans up)  
-[6min] Q&A  
-[5min] Result announcement & awards ceremony
+
+- [5min] Opening  
+- [20min / 1 team] 8 teams  
+  - [2min] Operator preparation  
+  - [4min] Start of competition  
+  - [6min] Presentation of algorithm (ranking update behind the scenes & operator cleans up)  
+  - [6min] Q&A  
+- [5min] Result announcement & awards ceremony
 
 # Trial site SSH accounts
 
