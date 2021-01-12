@@ -86,14 +86,16 @@ Currently, trial site login rights are only granted to "GCC 2021 Online" partici
 ---
 
 # Preparation
-- Create a directory for each group in /home/pi.
-- Copy files (show on next page) from https://github.com/imaoca/robust.
-- Create a “data” directory in that directory.
-- Perform the above operations on the soruce node and destination node.
+
+1. Create a directory for each group in /home/pi.
+2. Copy files (show on next page) from https://github.com/imaoca/robust.
+3. Create a “data” directory in that directory.
+4. Perform the above operations on the soruce node and destination node.
 
 ---
 
 # Files
+
 ~~~
 pi@Taro:~/demo $ ls
 ready.sh  	// Shell script to generate files for the competition. (1000 files) 
