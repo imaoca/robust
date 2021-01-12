@@ -1,9 +1,6 @@
----
-marp: 
----
-
 # Robust Protocol Challenger’s Guide
-## GCC 2021 Online  
+
+## GCC 2021 Online
 
 ### Trainer
 
@@ -17,17 +14,16 @@ https://www.facebook.com/imaoka.micihihiro/
 Yuya Tsuru  
 Naoki Takayama
 
-
-
 ---
+
 # Background
 
 In general, cyber security tends to focus on protecting information devices and data from malicious attackers.  
 In addition to this, securing communication from accidents and natural disasters is also an important task of cyber security.  
 We have designed a contest to compete for skills to accomplish such tasks.  
 
-
 ---
+
 # What is Robust Protocol Open Challenge
 
 Node A and Node B are connected by a faulty LAN cable.  
@@ -37,6 +33,7 @@ Compete for the number of error-free file transfers.
 ![](img/fig1.png) 
 
 ----
+
 # Robust Protocol Open Challenge trial site
 
 We have prepared a remote server that causes a pseudo failure on LAN.   
@@ -51,18 +48,19 @@ The following languages ​​are usable to implement the protocol.
 - Rust  
 
 ---
+
 # Diagram of trial site
 
 ![](img/fig4.png) 
 
-
 ----
+
 # Photo of Robust Protocol Challenge trial site
 
 ![](img/fig2.png)
 
-
 ----
+
 # Scoring method
 
 After the time limit, we are checking the files that has been saved inside the receiving side. Scoring will be done as follows.  
@@ -74,6 +72,7 @@ After the time limit, we are checking the files that has been saved inside the r
 \- 5pts per duplicate file (files with equal content)  
 
 ----
+
 # Trial site SSH accounts
 
 The trial site is currently available.  
@@ -84,14 +83,16 @@ imaoca@gmail.com
   
 Currently, trial site login rights are only granted to "GCC 2021 Online" participants.
 
-
 ---
+
 # Preparation
 - Create a directory for each group in /home/pi.
 - Copy files (show on next page) from https://github.com/imaoca/robust.
 - Create a “data” directory in that directory.
 - Perform the above operations on the soruce node and destination node.
+
 ---
+
 # Files
 ~~~
 pi@Taro:~/demo $ ls
@@ -110,14 +111,17 @@ jammer.py   // Jamming script
 ~~~
 
 ---
+
 # What is a LAN cable with a  failure
+
 By using Jamming Machine, LAN cable(10BASE-T) causes a pseudo failure.
 The Jamming Machine is located between LAN cables and interferes with communication by injecting electrical noise into the cables.
 The noise pattern and timing are programmable and this time adjusted to about 50% packet loss with Ping examine.
 
-
 ---
+
 # Jamming Machine (jammer.bash)
+
 The Jamming Machine that fails the LAN cable is executed by the following script. You need root privileges to run this script.
 ~~~bash
 pi@Taro:~ $ cat jammer.bash
@@ -137,15 +141,20 @@ done
 
 ---
 # Set up ethernet adapters
+
 Both LAN adapters(eth*) for the faulty cable should be configured speed 10 and duplex "FULL". You need root privileges to run this script.
+
 ### At Taro
+
 ~~~bash
 sudo ethtool -s eth1 autoneg on
 sudo ethtool -s eth1 autoneg off
 sudo ethtool -s eth1 duplex full
 sudo ethtool -s eth1 speed 10
 ~~~
+
 ### At Hanako
+
 ~~~bash
 sudo ethtool -s eth0 autoneg on
 sudo ethtool -s eth0 autoneg off
@@ -154,7 +163,9 @@ sudo ethtool -s eth0 speed 10
 ~~~
 
 ---
+
 # Robust protocol contest flow
+
 1. Generate transfer files in Taro
 2. Send generated files from Taro to Hanako
 3. Evaluations on Hanako (Check error free transferred files)
@@ -163,6 +174,7 @@ sudo ethtool -s eth0 speed 10
 6. Evaluations on Hanako (Check error free transferred files)
 
 ---
+
 # 1. Generate transfer files in Taro
 
 
@@ -189,6 +201,7 @@ Enter the values ​​for the following variables according to the environment.
 HOST, USER, DIR .
 
 ---
+
 # 2. Send generated files from Taro to Hanako
 
 ~~~bash
@@ -208,6 +221,7 @@ Hanako: python3 main.py sender
 ---
 
 # 3. Evaluations on Hanako (Check error free transferred files)
+
 Run  following command on destination node.
 
 ~~~
@@ -215,12 +229,17 @@ $python3 cmp.py
 ~~~
 
 ---
+
 # 4. Generate transfer files in Hanako
+
 # 5. Send generated files from Hanako to Taro
+
 # 6. Evaluations on Hanako (Check error free transferred files)
+
 These procedures will be done by switching the sender and receiver.
 
 ---
+
 # Sample transfer program
 
 ~~~py
@@ -255,9 +274,10 @@ if __name__ == '__main__':
     main()
 ~~~
 
-
 ---
+
 # Time limit
+
 File transfer is done within the time limit of 60 seconds. An execution example is shown below.
 
 ~~~
@@ -265,23 +285,15 @@ pi@Taro:~/demo $ timeout 60 python3 sender
 ~~~
 
 ---
-# Scoring method
-Check all the files saved on the receiving side as receiving files during the time limit and score as follows.
 
-~~~
-+ 10pts per correct file
 
--10pts per file containing errors
-
--5pts per duplicate file (files with equal content)
-~~~
-
----
 # Trial site schedule management
+
 You can try the programs developed by each group on the trial site.
 However, if multiple programs use a failed LAN, the original performance will not be achieved. If you want to use the trial site independently, you need to make a reservation, so please declare it. We plan to use the following tools for schedule management.
 https://calendly.com/
 For other groups, please check the free time on the trial site before using it.
 
 ---
+
 # Come on challengers!
