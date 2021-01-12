@@ -5,7 +5,7 @@ marp:
 # Robust Protocol Challenger’s Guide
 ## GCC 2021 Online  
 
-### Speaker
+### Trainer
 
 Michihiro Imaoka (Hiro) JP  
 @imaoca  
