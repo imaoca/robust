@@ -87,9 +87,9 @@ Currently, trial site login rights are only granted to "GCC 2021 Online" partici
 
 # Preparation
 
-1. Create a directory for each group in /home/pi.
-2. Copy files (show on next page) from https://github.com/imaoca/robust.
-3. Create a “data” directory in that directory.
+1. Create a directory for each group in `/home/pi`.
+2. Copy files (show on next page) from [this GitHub repository](https://github.com/imaoca/robust).
+3. Create a `data` directory in that directory.
 4. Perform the above operations on the soruce node and destination node.
 
 ---
@@ -125,8 +125,8 @@ The noise pattern and timing are programmable and this time adjusted to about 50
 # Jamming Machine (jammer.bash)
 
 The Jamming Machine that fails the LAN cable is executed by the following script. You need root privileges to run this script.
+
 ~~~bash
-pi@Taro:~ $ cat jammer.bash
 #!/bin/bash
 trap 'echo "wait a moment..."; echo 17 > /sys/class/gpio/unexport; sleep 5; echo "cleaned gpio17."; exit 0;' 2
 echo 17 > /sys/class/gpio/unexport
@@ -144,7 +144,7 @@ done
 ---
 # Set up ethernet adapters
 
-Both LAN adapters(eth*) for the faulty cable should be configured speed 10 and duplex "FULL". You need root privileges to run this script.
+Both LAN adapters(eth\*) for the faulty cable should be configured speed 10 and duplex "FULL". You need root privileges to run this script.
 
 ### At Taro
 
@@ -199,15 +199,14 @@ DIR=demo/
 scp check.md5 ${USER}@${HOST}:${DIR}
 ~~~    
 
-Enter the values ​​for the following variables according to the environment.
-HOST, USER, DIR .
+Enter the values in `ready.sh` ​​for the following variables according to the environment.
+(Variables: `HOST`, `USER`, `DIR`)
 
 ---
 
 # 2. Send generated files from Taro to Hanako
 
-~~~bash
-user0@Taro:~/robust $ cat README.md
+```
 # Taro->Hanako
 
 Taro: python3 main.py sender
@@ -218,16 +217,17 @@ Hanako: python3 main.py receiver
 Taro: python3 main.py receiver
 Hanako: python3 main.py sender
 
-~~~
+(From README_user0.md)
+```
 
 ---
 
 # 3. Evaluations on Hanako (Check error free transferred files)
 
-Run  following command on destination node.
+Run following command on destination node.
 
 ~~~
-$python3 cmp.py
+$ python3 cmp.py
 ~~~
 
 ---
@@ -245,7 +245,6 @@ These procedures will be done by switching the sender and receiver.
 # Sample transfer program
 
 ~~~py
-pi@Taro:~/demo $ cat main.py
 import sys
 # import threading
 import utils
@@ -283,7 +282,7 @@ if __name__ == '__main__':
 File transfer is done within the time limit of 60 seconds. An execution example is shown below.
 
 ~~~
-pi@Taro:~/demo $ timeout 60 python3 sender
+$ timeout 60 python3 sender
 ~~~
 
 ---
