@@ -34,7 +34,7 @@ Compete for the number of error-free file transfers.
 
 ----
 
-# Robust Protocol Open Challenge trial site
+# Robust Protocol Open Challenge Trial Site
 
 We have prepared a remote server that causes a pseudo failure on LAN.   
 Nodes are constructed by two Raspberry Pi-2.  
@@ -49,19 +49,19 @@ The following languages ​​are usable to implement the protocol.
 
 ---
 
-# Diagram of trial site
+# Diagram of Trial Site
 
 ![](img/fig4.png) 
 
 ----
 
-# Photo of Robust Protocol Challenge trial site
+# Photo of Robust Protocol Challenge Trial Site
 
 ![](img/fig2.png)
 
 ----
 
-# Scoring method
+# Scoring Method
 
 After the time limit, we are checking the files that has been saved inside the receiving side. Scoring will be done as follows.  
   
@@ -73,7 +73,7 @@ After the time limit, we are checking the files that has been saved inside the r
 
 ----
 
-# Trial site SSH accounts
+# Trial Site SSH Accounts
 
 The trial site is currently available.  
 If you want to try it, please send us your SSH public key.  
@@ -114,7 +114,7 @@ jammer.py   // Jamming script
 
 ---
 
-# What is a LAN cable with a  failure
+# What is a LAN cable with failure
 
 By using Jamming Machine, LAN cable(10BASE-T) causes a pseudo failure.  
 The Jamming Machine is located between LAN cables and interferes with communication by injecting electrical noise into the cables.  
@@ -142,7 +142,8 @@ done
 ~~~
 
 ---
-# Set up ethernet adapters
+
+# Setup Ethernet Adapters
 
 Both LAN adapters(eth\*) for the faulty cable should be configured speed 10 and duplex "FULL". You need root privileges to run this script.
 
@@ -166,9 +167,9 @@ sudo ethtool -s eth0 speed 10
 
 ---
 
-# Robust protocol contest flow
+# Robust Protocol Open Challenge Contest Flow
 
-1. Generate transfer files in Taro
+1. Generate files to transfer in Taro
 2. Send generated files from Taro to Hanako
 3. Evaluations on Hanako (Check error free transferred files)
 4. Generate transfer files on Hanako
@@ -177,7 +178,7 @@ sudo ethtool -s eth0 speed 10
 
 ---
 
-# 1. Generate transfer files in Taro
+# 1. Generate files to transfer in Taro
 
 
 ~~~bash
@@ -232,7 +233,7 @@ $ python3 cmp.py
 
 ---
 
-# 4. Generate transfer files in Hanako
+# 4. Generate files to transfer in Hanako
 
 # 5. Send generated files from Hanako to Taro
 
@@ -242,7 +243,7 @@ These procedures will be done by switching the sender and receiver.
 
 ---
 
-# Sample transfer program
+# Sample Program to Transfer the Files
 
 ~~~py
 import sys
@@ -277,7 +278,7 @@ if __name__ == '__main__':
 
 ---
 
-# Time limit
+# Time Limit
 
 File transfer is done within the time limit of 60 seconds. An execution example is shown below.
 
@@ -288,12 +289,14 @@ $ timeout 60 python3 sender
 ---
 
 
-# Trial site schedule management
+# Trial Site Schedule Management
 
 You can try the programs developed by each group on the trial site.  
-However, if multiple programs use a failed LAN, the original performance will not be achieved. If you want to use the trial site independently, you need to make a reservation, so please declare it. We plan to use the following tools for schedule management.  
-https://calendly.com/  
-For other groups, please check the free time on the trial site before using it.  
+However, if multiple programs uses a failed LAN, the original performance will not be resulted.  
+If you want to use the trial site independently, you need to make a reservation, so please check it out.  
+We are planning to use the following tool for the schedule management.  
+https://calendly.com/ (Wait for a while, because we are preaparing right now.)  
+In the case, please check the free time on the trial site before using it.  
 
 ---
 
