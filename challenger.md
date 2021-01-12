@@ -116,9 +116,9 @@ jammer.py   // Jamming script
 
 # What is a LAN cable with a  failure
 
-By using Jamming Machine, LAN cable(10BASE-T) causes a pseudo failure.
-The Jamming Machine is located between LAN cables and interferes with communication by injecting electrical noise into the cables.
-The noise pattern and timing are programmable and this time adjusted to about 50% packet loss with Ping examine.
+By using Jamming Machine, LAN cable(10BASE-T) causes a pseudo failure.  
+The Jamming Machine is located between LAN cables and interferes with communication by injecting electrical noise into the cables.  
+The noise pattern and timing are programmable and this time adjusted to about 50% packet loss with Ping examine.  
 
 ---
 
@@ -199,7 +199,7 @@ DIR=demo/
 scp check.md5 ${USER}@${HOST}:${DIR}
 ~~~    
 
-Enter the values in `ready.sh` ​​for the following variables according to the environment.
+Enter the values in `ready.sh` ​​for the following variables according to the environment.  
 (Variables: `HOST`, `USER`, `DIR`)
 
 ---
@@ -290,10 +290,10 @@ $ timeout 60 python3 sender
 
 # Trial site schedule management
 
-You can try the programs developed by each group on the trial site.
-However, if multiple programs use a failed LAN, the original performance will not be achieved. If you want to use the trial site independently, you need to make a reservation, so please declare it. We plan to use the following tools for schedule management.
-https://calendly.com/
-For other groups, please check the free time on the trial site before using it.
+You can try the programs developed by each group on the trial site.  
+However, if multiple programs use a failed LAN, the original performance will not be achieved. If you want to use the trial site independently, you need to make a reservation, so please declare it. We plan to use the following tools for schedule management.  
+https://calendly.com/  
+For other groups, please check the free time on the trial site before using it.  
 
 ---
 
