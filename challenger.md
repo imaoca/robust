@@ -118,7 +118,7 @@ The noise pattern and timing are programmable and this time adjusted to about 50
 
 ---
 # Jamming Machine (jammer.bash)
-The Jamming Machine that fails the LAN cable is executed by the following script.
+The Jamming Machine that fails the LAN cable is executed by the following script. You need root privileges to run this script.
 ~~~bash
 pi@Taro:~ $ cat jammer.bash
 #!/bin/bash
@@ -137,7 +137,7 @@ done
 
 ---
 # Set up ethernet adapters
-Both LAN adapters(eth*) for the faulty cable should be configured speed 10 and duplex "FULL".
+Both LAN adapters(eth*) for the faulty cable should be configured speed 10 and duplex "FULL". You need root privileges to run this script.
 ### At Taro
 ~~~bash
 sudo ethtool -s eth1 autoneg on
