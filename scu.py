@@ -146,7 +146,7 @@ class SCU:
                     rtr = self.calculate_rtr(key, packet.header.seq)
                     if rtr is not None: # 再送要求する必要あり
                         self.response(SCUPacketType.Rtr.value, from_addr, packet.header.id, rtr)
-                    elif key in received_files_length and self.is_all_received(key, received_files_length[key]): # ファイル受信完了
+                    elif key in received_files_length and self.is_all_received(key, received_files_length[key]): #  ファイル受信完了
                         received_files_flag[key] = True
                         self.response(SCUPacketType.Fin.value, from_addr, packet.header.id, 0)
                         self.file_received.put((key, received_files_length[key]))
@@ -191,4 +191,5 @@ class SCU:
         if self.mode == SCUMode.SendMode:
             raise Exception
         key, length = self.file_received.get()
-        return utils.fold_data(self.received_files_data[key], length
+        return utils.fold_data(self.received_files_data[key], length)
+
