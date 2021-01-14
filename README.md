@@ -68,12 +68,12 @@ After the time limit, we are checking the files that has been saved inside the r
 # Show Time (time table assuming for 8 teams)
 
 [3hour = 180min]  
-[10min] Opening  
-[20min / 1 team] 8 teams  
-[4min] Operator preparation  
-[6min] Start of competition  
-[10min] Presentation of algorithm (ranking update behind the scenes & operator cleans up)    
-[10min] Result announcement & awards ceremony
+- [10min] Opening  
+- [20min / 1 team] 8 teams  
+  - [4min] Operator preparation  
+  - [6min] Start of competition  
+  - [10min] Presentation of algorithm (ranking update behind the scenes & operator cleans up)    
+- [10min] Result announcement & awards ceremony
 
 # Trial site SSH accounts
 
