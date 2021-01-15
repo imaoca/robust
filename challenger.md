@@ -100,7 +100,7 @@ Currently, trial site login rights are only granted to "GCC 2021 Online" partici
 pi@Taro:~/demo $ ls
 ready.sh  	// Shell script to generate files for the competition. (1000 files) 
 check.md5	// It will be created by "ready.sh". This file will be transferred to receiving side, and be used for hash check of transferred files.
-data  		// Directory for transferred files. Create this directory before executing the "ready.sh".
+data  		//Directory for transferred files. Create this directory before executing the "ready.sh". At the destination side, before receiving, files of the directory have to be cleaned.
 cmp.py		// Python script for hash check after the competition.
 main.py 	// Sample Transfer Program
 README_user0.md  	// Guide for the sample program. Rewrite the file name so that you can see the user name.
