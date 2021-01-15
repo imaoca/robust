@@ -145,14 +145,14 @@ done
 
 # Setup Ethernet Adapters
 
-Both LAN adapters(eth\*) for the faulty cable should be configured speed 10 and duplex "FULL". You need root privileges to run this script.
+Both LAN adapters(eth\*) for the faulty cable should be configured speed 10 and duplex "half". You need root privileges to run this script.
 
 ### At Taro
 
 ~~~bash
 sudo ethtool -s eth1 autoneg on
 sudo ethtool -s eth1 autoneg off
-sudo ethtool -s eth1 duplex full
+sudo ethtool -s eth1 duplex half
 sudo ethtool -s eth1 speed 10
 ~~~
 
@@ -161,7 +161,7 @@ sudo ethtool -s eth1 speed 10
 ~~~bash
 sudo ethtool -s eth0 autoneg on
 sudo ethtool -s eth0 autoneg off
-sudo ethtool -s eth0 duplex full
+sudo ethtool -s eth0 duplex half
 sudo ethtool -s eth0 speed 10
 ~~~
 
