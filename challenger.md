@@ -52,7 +52,8 @@ The following languages ​​are usable to implement the protocol.
 # Diagram of Trial Site
 
 ![](img/fig4.png) 
-
+Hanako's eth0 IP address can change.
+Now it's 192.168.3.9.
 ----
 
 # Photo of Robust Protocol Challenge Trial Site
