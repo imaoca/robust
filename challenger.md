@@ -295,8 +295,9 @@ $ timeout 60 python3 sender
 You can try the programs developed by each group on the trial site.  
 However, if multiple programs uses a failed LAN, the original performance will not be resulted.  
 If you want to use the trial site independently, you need to make a reservation, so please check it out.  
-We are planning to use the following tool for the schedule management.  
-https://calendly.com/ (Wait for a while, because we are preaparing right now.)  
+
+[Page to make a Reservation](https://calendly.com/robust_gcc2021)  
+
 In the case, please check the free time on the trial site before using it.  
 
 ---
