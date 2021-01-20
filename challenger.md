@@ -179,17 +179,16 @@ sudo ethtool -s eth0 speed 10
 
 ---
 
-# 1. Generate files to transfer in Taro
+# 1. Generate files to transfer in Taro (ready.sh)
 
 
 ~~~bash
-pi@Taro:~/demo $ cat ready.sh 
 #!/bin/sh
 rm data/*
 rm check.md5
 for i in `seq 0 999`
 do
-    cat /dev/urandom | base64 | head -c 102400 > data/data$i
+    cat /dev/urandom | head -c 102400 > data/data$i
 done
 cd data
 md5sum $(find . -type f) | tee ../check.md5
