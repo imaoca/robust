@@ -16,7 +16,7 @@ def main():
             # parallel
             # threads = []
             # for id in range(0, 1000):
-            #     threads.push(threading.Thread(target = scu.send("data/data{id}", id)))
+            #     threads.append(threading.Thread(target = scu.send(f"data/data{id}", id)))
             #     threads[-1].setDaemon(True)
             #     threads[-1].start()
 
