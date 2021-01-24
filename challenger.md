@@ -39,7 +39,7 @@ Compete for the number of error-free file transfers.
 We have prepared a remote server that causes a pseudo failure on LAN.   
 Nodes are constructed by two Raspberry Pi-2.  
 You can participate in the contest by logging in with SSH etc.  
-The following languages ​​are usable to implement the protocol.  
+The following languages are usable to implement the protocol.  
 
 - gcc version 8.3.0(Raspbian 8.3.0-6+rpi1)  
 - go version go1.15.3 linux/arm  
@@ -60,8 +60,20 @@ Now it's 192.168.3.9.
 
 ![](img/fig2.png)
 
-----
 
+----
+# Regulation
+- Bidirectional transfer testing (NodeA->NodeB & NodeA<-NodeB)
+- File transfer must pass through a jamming machine
+- Do not tune the machine
+- Only programs that run in user mode are allowed
+- File compression is prohibited.
+- File transfer time limit is 60 seconds.
+- Use scripts prepared by the administration to generate files for transfer.
+- Verification of the received file must be done by the script prepared by the administration.
+
+
+---
 # Scoring Method
 
 After the time limit, we are checking the files that has been saved inside the receiving side. Scoring will be done as follows.  
@@ -200,7 +212,7 @@ DIR=demo/
 scp check.md5 ${USER}@${HOST}:${DIR}
 ~~~    
 
-Enter the values in `ready.sh` ​​for the following variables according to the environment.  
+Enter the values in `ready.sh` for the following variables according to the environment.  
 (Variables: `HOST`, `USER`, `DIR`)
 
 ---
