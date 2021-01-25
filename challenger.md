@@ -92,7 +92,7 @@ The trial site is currently available.
 If you want to try it, please send us your SSH public key.  
 After creating an account, we will send you your login information. Please contact below.  
   
-@Yuya Tsuru [JP.21on.Tu] 
+imaoca@gmail.com
   
 Currently, trial site login rights are only granted to "GCC 2021 Online" participants.
 
