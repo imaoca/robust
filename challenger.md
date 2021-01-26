@@ -64,6 +64,8 @@ Now it's 192.168.3.9.
 ----
 # Regulation
 - Bidirectional transfer testing (NodeA->NodeB & NodeA<-NodeB)
+- The programs for sending and receiving can be different programs.
+- For bidirectional transfer, they must be the same program.
 - File transfer must pass through a jamming machine
 - Do not tune the machine
 - Only programs that run in user mode are allowed
