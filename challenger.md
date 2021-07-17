@@ -140,6 +140,11 @@ The noise pattern and timing are programmable and this time adjusted to about 50
 # Jamming Machine (jammer.bash)
 
 The Jamming Machine that fails the LAN cable is executed by the following script. You need root privileges to run this script.
+If you display Jammer's output on the screen, it will cause a delay, so redirect the output to /dev/null.
+
+~~~bash
+$ sudo ./jammer.bash > /dev/null
+~~~
 
 ~~~bash
 #!/bin/bash
