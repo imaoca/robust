@@ -84,3 +84,13 @@ After creating an account, we will send you your login information. Please conta
 @Yuya Tsuru [JP.21on.Tu]
   
 Currently, trial site login rights are only granted to "GCC 2021 Online" participants.
+
+# Trial Site Schedule Management
+
+You can try the programs developed by each group on the trial site.  
+However, if multiple programs uses a failed LAN, the original performance will not be resulted.  
+If you want to use the trial site independently, you need to make a reservation, so please check it out.  
+
+[Page to make a Reservation](https://calendly.com/rpoc)  
+
+In the case, please check the free time on the trial site before using it.  
