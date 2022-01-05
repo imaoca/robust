@@ -11,8 +11,8 @@ https://www.facebook.com/imaoka.micihihiro/
 
 ### TAs
 
-Naoki Takayama
-Kazuki Matsuo
+Naoki Takayama  
+Kazuki Matsuo  
 Lena Yu
 
 # Background
