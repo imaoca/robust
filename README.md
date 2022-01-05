@@ -1,6 +1,6 @@
 # Introduction of Robust Protocol Open Challenge
 
-## GCC 2021 Online  
+## GCC 2022 Taiwan  
 
 ### Trainer
 
@@ -11,8 +11,9 @@ https://www.facebook.com/imaoka.micihihiro/
 
 ### TAs
 
-Yuya Tsuru  
 Naoki Takayama
+Kazuki Matsuo
+Lena Yu
 
 # Background
 
@@ -39,7 +40,7 @@ The noise pattern and timing are programmable and this time adjusted to about 50
 We have prepared a remote server that causes a pseudo failure on LAN.   
 Nodes are constructed by two Raspberry Pi-2.  
 You can participate in the contest by logging in with SSH etc.  
-The following languages ​​are usable to implement the protocol.  
+The following languages are usable to implement the protocol.  
 
 - gcc version 8.3.0(Raspbian 8.3.0-6+rpi1)  
 - go version go1.15.3 linux/arm  
@@ -81,6 +82,6 @@ The trial site is currently available.
 If you want to try it, please send us your SSH public key.  
 After creating an account, we will send you your login information. Please contact below.  
   
-@Yuya Tsuru [JP.21on.Tu]
+@Naoki Takayama [JP.22tw.Sf]
   
-Currently, trial site login rights are only granted to "GCC 2021 Online" participants.
+Currently, trial site login rights are only granted to "GCC 2022 Taiwan" participants.
