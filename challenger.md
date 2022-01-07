@@ -1,6 +1,6 @@
 # Robust Protocol Challenger’s Guide
 
-## GCC 2021 Online
+## GCC 2022 Taiwan
 
 ### Trainer
 
@@ -11,8 +11,9 @@ https://www.facebook.com/imaoka.micihihiro/
 
 ### TAs
 
-Yuya Tsuru  
-Naoki Takayama
+Naoki Takayama  
+Kazuki Matsuo  
+Lena Yu
 
 ---
 
