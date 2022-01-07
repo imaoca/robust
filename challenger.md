@@ -1,6 +1,6 @@
 # Robust Protocol Challenger’s Guide
 
-## GCC 2021 Online
+## GCC 2022 Taiwan
 
 ### Trainer
 
@@ -11,8 +11,9 @@ https://www.facebook.com/imaoka.micihihiro/
 
 ### TAs
 
-Yuya Tsuru  
-Naoki Takayama
+Naoki Takayama  
+Kazuki Matsuo  
+Lena Yu
 
 ---
 
@@ -314,7 +315,7 @@ You can try the programs developed by each group on the trial site.
 However, if multiple programs uses a failed LAN, the original performance will not be resulted.  
 If you want to use the trial site independently, you need to make a reservation, so please check it out.  
 
-[Page to make a Reservation](https://calendly.com/robust_gcc2021)  
+[Page to make a Reservation](#todo)  
 
 In the case, please check the free time on the trial site before using it.  
 
