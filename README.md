@@ -83,5 +83,13 @@ If you want to try it, please send us your SSH public key.
 After creating an account, we will send you your login information. Please contact below.  
   
 @Naoki Takayama [JP.22tw.Sf]
-  
-Currently, trial site login rights are only granted to "GCC 2022 Taiwan" participants.
+ 
+Currently, trial site login rights are only granted to "GCC 2021 Online" participants.
+
+# Trial Site Schedule Management
+
+You can try the programs developed by each group on the trial site.  
+However, if multiple programs uses a failed LAN, the original performance will not be resulted.  
+If you want to use the trial site, you need to make a reservation, so please check it out.  
+
+[Page to make a Reservation](https://calendly.com/rpoc)  
