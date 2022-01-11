@@ -52,7 +52,7 @@ The following languages are usable to implement the protocol.
 
 ![](img/fig4.png) 
 Hanako's eth1 IP address can change.
-Now it's 192.168.3.14.
+Now it's 192.168.3.11.
 ----
 
 # Photo of Robust Protocol Challenge trial site
