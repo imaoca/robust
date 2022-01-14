@@ -11,31 +11,25 @@ https://www.facebook.com/imaoka.micihihiro/
 
 ### TAs
 
-Naoki Takayama  
-Kazuki Matsuo  
-Lena Yu
+- Naoki Takayama  
+- Kazuki Matsuo  
+- Lena Yu
 
----
-
-# Background
+## Background
 
 In general, cyber security tends to focus on protecting information devices and data from malicious attackers.  
 In addition to this, securing communication from accidents and natural disasters is also an important task of cyber security.  
 We have designed a contest to compete for skills to accomplish such tasks.  
 
----
-
-# What is Robust Protocol Open Challenge
+## What is Robust Protocol Open Challenge
 
 Node A and Node B are connected by a faulty LAN cable.  
 Transfer files from node A to B or node B to A.  
 Compete for the number of error-free file transfers.  
 
-![](img/fig1.png) 
+![Figure 1](img/fig1.png) 
 
-----
-
-# Robust Protocol Open Challenge Trial Site
+## Robust Protocol Open Challenge Trial Site
 
 We have prepared a remote server that causes a pseudo failure on LAN.   
 Nodes are constructed by two Raspberry Pi-2.  
@@ -47,23 +41,21 @@ The following languages are usable to implement the protocol.
 - Python 2.7.16  
 - Python 3.7.3  
 - Rust  
+- NodeJS v14.15.4 (npm v6.14.10)
 
----
+## Diagram of Trial Site
 
-# Diagram of Trial Site
+![Figure 4](img/fig4.png) 
 
-![](img/fig4.png) 
-Hanako's eth1 IP address can change.
-Now it's 192.168.3.11.
-----
+**Hanako's eth1 IP address can change.  
+Now it's 192.168.3.11.**
 
-# Photo of Robust Protocol Challenge Trial Site
+## Photo of Robust Protocol Challenge Trial Site
 
-![](img/fig2.png)
+![Figure 2](img/fig2.png)
 
+## Regulation
 
-----
-# Regulation
 - Bidirectional transfer testing (NodeA->NodeB & NodeA<-NodeB)
 - The programs for sending and receiving can be different programs.
 - For bidirectional transfer, they must be the same program.
@@ -75,44 +67,33 @@ Now it's 192.168.3.11.
 - Use scripts prepared by the administration to generate files for transfer.
 - Verification of the received file must be done by the script prepared by the administration.
 
-
----
-# Scoring Method
+## Scoring Method
 
 After the time limit, we are checking the files that has been saved inside the receiving side. Scoring will be done as follows.  
   
-\+ 10pts per correct file  
-  
-\- 10pts per file containing errors  
-  
-\- 5pts per duplicate file (files with equal content)  
+- \+ 10pts per correct file  
+- \- 10pts per file containing errors  
+- \- 5pts per duplicate file (files with equal content)  
 
-----
+## Trial Site SSH Accounts
 
-# Trial Site SSH Accounts
-
-The trial site is currently available.  
+Trial site is available now.  
 If you want to try it, please send us your SSH public key.  
-After creating an account, we will send you your login information. Please contact below.  
+After creating an account, we will send you your login information. Please DM `Naoki Takayama [JP.22tw.Sf]` on Slack.
   
-imaoca@gmail.com
-  
-Currently, trial site login rights are only granted to "GCC 2021 Online" participants.
+Currently, trial site login rights are only granted to "GCC 2022 Taiwan" participants.
 
----
+## Preparation
 
-# Preparation
+Please perform following operations on bothe the source node and destination node.
 
-1. Create a directory for each group in `/home/pi`.
-2. Copy files (show on next page) from [this GitHub repository](https://github.com/imaoca/robust).
+1. SSH Login to node using given login information.
+2. Clone [this GitHub repository](https://github.com/imaoca/robust).
 3. Create a `data` directory in that directory.
-4. Perform the above operations on the soruce node and destination node.
-
----
 
 # Files
 
-~~~
+```
 pi@Taro:~/demo $ ls
 ready.sh  	// Shell script to generate files for the competition. (1000 files) 
 check.md5	// It will be created by "ready.sh". This file will be transferred to receiving side, and be used for hash check of transferred files.
@@ -126,28 +107,24 @@ utils.py
 packet.py 
 __pycache__ // Cache directory for Python. No need to copy from the repository.
 jammer.py   // Jamming script
-~~~
+```
 
----
+## What is a LAN cable with failure
 
-# What is a LAN cable with failure
-
-By using Jamming Machine, LAN cable(10BASE-T) causes a pseudo failure.  
+By using Jamming Machine, LAN cable (10BASE-T) causes a pseudo failure.  
 The Jamming Machine is located between LAN cables and interferes with communication by injecting electrical noise into the cables.  
 The noise pattern and timing are programmable and this time adjusted to about 50% packet loss with Ping examine.  
 
----
-
-# Jamming Machine (jammer.bash)
+## Jamming Machine (jammer.bash)
 
 The Jamming Machine that fails the LAN cable is executed by the following script. You need root privileges to run this script.
 If you display Jammer's output on the screen, it will cause a delay, so redirect the output to /dev/null.
 
-~~~bash
+```bash
 $ sudo ./jammer.bash > /dev/null
-~~~
+```
 
-~~~bash
+```bash
 #!/bin/bash
 trap 'echo "wait a moment..."; echo 17 > /sys/class/gpio/unexport; sleep 5; echo "cleaned gpio17."; exit 0;' 2
 echo 17 > /sys/class/gpio/unexport
@@ -160,35 +137,31 @@ do
   sleepenh `printf 0.0%03d $((150 + $RANDOM % 100))`
   echo 0 > /sys/class/gpio/gpio17/value
 done
-~~~
+```
 
----
-
-# Setup Ethernet Adapters
+## Setup Ethernet Adapters
 
 Both LAN adapters(eth\*) for the faulty cable should be configured speed 10 and duplex "half". You need root privileges to run this script.
 
 ### At Taro
 
-~~~bash
+```bash
 sudo ethtool -s eth1 autoneg on
 sudo ethtool -s eth1 autoneg off
 sudo ethtool -s eth1 duplex half
 sudo ethtool -s eth1 speed 10
-~~~
+```
 
 ### At Hanako
 
-~~~bash
+```bash
 sudo ethtool -s eth0 autoneg on
 sudo ethtool -s eth0 autoneg off
 sudo ethtool -s eth0 duplex half
 sudo ethtool -s eth0 speed 10
-~~~
+```
 
----
-
-# Robust Protocol Open Challenge Contest Flow
+## Robust Protocol Open Challenge Contest Flow
 
 1. Generate files to transfer in Taro
 2. Send generated files from Taro to Hanako
@@ -197,12 +170,9 @@ sudo ethtool -s eth0 speed 10
 5. Send generated files from Hanako to Taro
 6. Evaluations on Hanako (Check error free transferred files)
 
----
+### 1. Generate files to transfer in Taro (ready.sh)
 
-# 1. Generate files to transfer in Taro (ready.sh)
-
-
-~~~bash
+```bash
 #!/bin/sh
 rm data/*
 rm check.md5
@@ -218,14 +188,12 @@ HOST=192.168.3.9
 USER=pi
 DIR=demo/
 scp check.md5 ${USER}@${HOST}:${DIR}
-~~~    
+```    
 
-Enter the values in `ready.sh` for the following variables according to the environment.  
+Enter the values in `ready.sh` for the following variables according to your teams' environment.  
 (Variables: `HOST`, `USER`, `DIR`)
 
----
-
-# 2. Send generated files from Taro to Hanako
+### 2. Send generated files from Taro to Hanako
 
 ```
 # Taro->Hanako
@@ -241,31 +209,29 @@ Hanako: python3 main.py sender
 (From README_user0.md)
 ```
 
----
-
-# 3. Evaluations on Hanako (Check error free transferred files)
+### 3. Evaluations on Hanako (Check error free transferred files)
 
 Run following command on destination node.
 
-~~~
+```
 $ python3 cmp.py
-~~~
+```
 
----
+### 4. Generate files to transfer in Hanako
 
-# 4. Generate files to transfer in Hanako
+This procedures will be done by switching the sender and receiver on previous explanation.
 
-# 5. Send generated files from Hanako to Taro
+### 5. Send generated files from Hanako to Taro
 
-# 6. Evaluations on Hanako (Check error free transferred files)
+This procedures will be done by switching the sender and receiver on previous explanation.
 
-These procedures will be done by switching the sender and receiver.
+### 6. Evaluations on Hanako (Check error free transferred files)
 
----
+This procedures will be done by switching the sender and receiver on previous explanation.
 
-# Sample Program to Transfer the Files
+### Sample Program to Transfer the Files
 
-~~~py
+```py
 import sys
 # import threading
 import utils
@@ -294,31 +260,22 @@ def main():
 
 if __name__ == '__main__':
     main()
-~~~
+```
 
----
-
-# Time Limit
+### Time Limit
 
 File transfer is done within the time limit of 60 seconds. An execution example is shown below.
 
-~~~
+```
 $ timeout 60 python3 sender
-~~~
+```
 
----
-
-
-# Trial Site Schedule Management
+## Trial Site Schedule Management
 
 You can try the programs developed by each group on the trial site.  
 However, if multiple programs uses a failed LAN, the original performance will not be resulted.  
-If you want to use the trial site independently, you need to make a reservation, so please check it out.  
+If you want to run your program on trial site, you must make a reservation before it.  
 
-[Page to make a Reservation](https://calendly.com/rpoc)  
+[Page to make a Reservation](https://calendly.com/rpoc)   
 
-In the case, please check the free time on the trial site before using it.  
-
----
-
-# Come on challengers!
+## Come on challengers!
