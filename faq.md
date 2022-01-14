@@ -15,3 +15,7 @@ Please understand that allowing them will change the goal and meaning of this le
 
 Yes!! Any external libraries are allowed to use!!  
 (Just be careful about license, if you are making your program available on the place such as GitHub after the competition.)
+
+## Do you plan to support new programming language to implement a protocol?
+
+If there are requests from multiple teams, we may consider adding new language.
