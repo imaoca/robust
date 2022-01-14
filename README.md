@@ -11,9 +11,9 @@ https://www.facebook.com/imaoka.micihihiro/
 
 ### TAs
 
-Naoki Takayama  
-Kazuki Matsuo  
-Lena Yu
+- Naoki Takayama  
+- Kazuki Matsuo  
+- Lena Yu
 
 # Background
 
@@ -29,7 +29,7 @@ Compete for the number of error-free file transfers.
 
 ![](img/fig1.png) 
 
-# What is a LAN cable with a  failure
+# What is a LAN cable with a failure
 
 By using Jamming Machine, LAN cable(10BASE-T) causes a pseudo failure.  
 The Jamming Machine is located between LAN cables and interferes with communication by injecting electrical noise into the cables.  
@@ -47,31 +47,31 @@ The following languages are usable to implement the protocol.
 - Python 2.7.16  
 - Python 3.7.3  
 - Rust  
+- NodeJS v14.15.4 (npm v6.14.10)
 
 # Diagram of trial site
 
-![](img/fig4.png) 
-Hanako's eth1 IP address can change.
-Now it's 192.168.3.11.
-----
+![Figure 4](img/fig4.png) 
+
+**Hanako's eth1 IP address can change.  
+Now it's 192.168.3.11.**
 
 # Photo of Robust Protocol Challenge trial site
 
-![](img/fig2.png)
+![Figure 2](img/fig2.png)
 
 # Scoring method
 
 After the time limit, we are checking the files that has been saved inside the receiving side. Scoring will be done as follows.  
   
-\+ 10pts per correct file  
-  
-\- 10pts per file containing errors  
-  
-\- 5pts per duplicate file (files with equal content)  
+- \+ 10pts per correct file  
+- \- 10pts per file containing errors  
+- \- 5pts per duplicate file (files with equal content)  
 
 # Show Time (time table assuming for 8 teams)
 
-[3hour = 180min]  
+**[3hour = 180min]** 
+
 - [10min] Opening  
 - [20min / 1 team] 8 teams  
   - [4min] Operator preparation  
@@ -82,12 +82,12 @@ After the time limit, we are checking the files that has been saved inside the r
 # Trial site SSH accounts
 
 The trial site is currently available.  
-If you want to try it, please send us your SSH public key.  
-After creating an account, we will send you your login information. Please contact below.  
+If you want to try it, please send us your SSH public key and group number.   
+After creating an account, we will send you your login information. Please DM me via Slack.  
   
 @Naoki Takayama [JP.22tw.Sf]
  
-Currently, trial site login rights are only granted to "GCC 2021 Online" participants.
+Currently, trial site login rights are only granted to "GCC 2022 Taiwan" participants.
 
 # Trial Site Schedule Management
 
