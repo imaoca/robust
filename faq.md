@@ -1,21 +1,21 @@
 # Frequently Asked Questions
 
-## Where will be the payload corrupted at?
+## Where will the payload be corrupted at?
 
-It will be corrupted in physical layer. As its written on [challenger.md](./challenger.md), Jamming Machine will inject an electric shock directly to the LAN cable when its activated.
+It will be corrupted in the physical layer. As written in [challenger.md](./challenger.md), the Jamming Machine will directly inject electrical noise into the LAN cable when it is activated.
 
 ## Can we apply compression / encoding to the given data?
 
-No. Any compressions, changing formats, encoding, etc... against the data is **NOT ALLOWED**.  
-(Except the case that data size is same, or being bigger when its transmitted.)  
-Purpose of this challenge is to "Design Robust Protocol that can communicate data even its connection is unstable.".  
-Please understand that allowing them will change the goal and meaning of this lecture.
+No. Any compressions, changing formats, encoding, etc... of the data is **NOT ALLOWED**.  
+(Except in cases where data size is the same, or being bigger when it is transmitted.) 
+The purpose of this challenge is to "Design a Robust Protocol that can communicate data even when its connection is unstable".  
+Please understand that allowing them will change the goal and meaning of this challenge.
 
-## Can we use external libraries to help for certain parts of the protocol?
+## Can we use external libraries to help with certain parts of the protocol?
 
-Yes!! Any external libraries are allowed to use!!  
-(Just be careful about license, if you are making your program available on the place such as GitHub after the competition.)
+Yes!! You are allowed to use any external libraries!!  
+(Just be careful about licensing issues, especially if you are making your program publicly available in places such as GitHub after the competition.)
 
-## Do you plan to support new programming language to implement a protocol?
+## Do you plan to support new programming languages to implement a protocol?
 
-If there are requests from multiple teams, we may consider adding new language.
+If there are requests from multiple teams, we may consider adding new languages.
