@@ -31,16 +31,16 @@ Compete for the number of error-free file transfers.
 
 # What is a LAN cable with a failure
 
-By using Jamming Machine, LAN cable(10BASE-T) causes a pseudo failure.  
-The Jamming Machine is located between LAN cables and interferes with communication by injecting electrical noise into the cables.  
-The noise pattern and timing are programmable and this time adjusted to about 50% packet loss with Ping examine.  
+The Jamming Machine is used to cause a pseudo failure in LAN cable(10BASE-T).  
+This Jamming Machine is located between the LAN cables and interferes with communication by injecting electrical noise into the cables.  
+The noise pattern and timing are programmable, and this time it is adjusted to about 50% packet loss with Ping examine.  
 
 # Robust Protocol Open Challenge trial site
 
 We have prepared a remote server that causes a pseudo failure on LAN.   
 Nodes are constructed by two Raspberry Pi-2.  
-You can participate in the contest by logging in with SSH etc.  
-The following languages are usable to implement the protocol.  
+You can participate in the contest by logging in with SSH, etc.  
+The following languages can be used to implement the protocol.  
 
 - gcc version 8.3.0(Raspbian 8.3.0-6+rpi1)  
 - go version go1.15.3 linux/arm  
@@ -51,10 +51,10 @@ The following languages are usable to implement the protocol.
 
 # Diagram of trial site
 
-![Figure 4](img/fig4.png) 
+![Figure 4](img/fig4_new.png) 
 
 **Hanako's eth1 IP address can change.  
-Now it's 192.168.3.11.**
+Now it's 192.168.3.8.**
 
 # Photo of Robust Protocol Challenge trial site
 
@@ -62,7 +62,7 @@ Now it's 192.168.3.11.**
 
 # Scoring method
 
-After the time limit, we are checking the files that has been saved inside the receiving side. Scoring will be done as follows.  
+After the time limit, we will check the files that have been saved inside the receiving side. Scoring will be done as follows.  
   
 - \+ 10pts per correct file  
 - \- 10pts per file containing errors  
@@ -91,8 +91,8 @@ Currently, trial site login rights are only granted to "GCC 2022 Taiwan" partici
 
 # Trial Site Schedule Management
 
-You can try the programs developed by each group on the trial site.  
-However, if multiple programs uses a failed LAN, the original performance will not be resulted.  
+Each group can test the developed program on the trial site. 
+However, if multiple programs use the failed LAN simultaneously, the performance will be affected, which could cause it to differ from the actual performance.
 If you want to use the trial site, you need to make a reservation, so please check it out.  
 
 [Page to make a Reservation](https://calendly.com/rpoc)  
