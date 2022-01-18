@@ -68,15 +68,20 @@ After the time limit, we will check the files that have been saved inside the re
 - \- 10pts per file containing errors  
 - \- 5pts per duplicate file (files with equal content)  
 
-# Show Time (time table assuming for 8 teams)
+# Show Time (time table assuming for 5 teams)
 
-**[3hour = 180min]** 
+**[4hour = 240min]** 
 
-- [10min] Opening  
-- [20min / 1 team] 8 teams  
-  - [4min] Operator preparation  
-  - [6min] Start of competition  
-  - [10min] Presentation of algorithm (ranking update behind the scenes & operator cleans up)    
+- [10min] Opening
+- [60min] Preperation of program and presentation
+- [10min] Break
+- [25min per team] For the 5 teams
+  - [4min] Operator preparation
+  - [6min] Start of competition
+  - [10min] Presentation of algorithm (ranking update behind the scenes & operator cleans up)
+  - [5min] Feedback and discussion
+- [5min] Break
+- [15min] Feedback and discussion for all teams
 - [10min] Result announcement & awards ceremony
 
 # Trial site SSH accounts
