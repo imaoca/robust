@@ -45,10 +45,10 @@ The following languages are usable to implement the protocol.
 
 ## Diagram of Trial Site
 
-![Figure 4](img/fig4.png) 
+![Figure 4](img/fig4_new.png) 
 
 **Hanako's eth1 IP address can change.  
-Now it's 192.168.3.11.**
+Now it's 192.168.3.8.**
 
 ## Photo of Robust Protocol Challenge Trial Site
 
@@ -69,7 +69,7 @@ Now it's 192.168.3.11.**
 
 ## Scoring Method
 
-After the time limit, we are checking the files that has been saved inside the receiving side. Scoring will be done as follows.  
+After the time limit, we will check the files that have been saved inside the receiving side. Scoring will be done as follows.  
   
 - \+ 10pts per correct file  
 - \- 10pts per file containing errors  
@@ -85,7 +85,7 @@ Currently, trial site login rights are only granted to "GCC 2022 Taiwan" partici
 
 ## Preparation
 
-Please perform following operations on bothe the source node and destination node.
+Please perform the following operations on both the source node and the destination node.
 
 1. SSH Login to node using given login information.
 2. Clone [this GitHub repository](https://github.com/imaoca/robust).
@@ -111,9 +111,9 @@ jammer.py   // Jamming script
 
 ## What is a LAN cable with failure
 
-By using Jamming Machine, LAN cable (10BASE-T) causes a pseudo failure.  
-The Jamming Machine is located between LAN cables and interferes with communication by injecting electrical noise into the cables.  
-The noise pattern and timing are programmable and this time adjusted to about 50% packet loss with Ping examine.  
+The Jamming Machine is used to cause a pseudo failure in LAN cable(10BASE-T).
+This Jamming Machine is located between the LAN cables and interferes with communication by injecting electrical noise into the cables.
+The noise pattern and timing are programmable, and this time it is adjusted to about 50% packet loss with Ping examine.
 
 ## Jamming Machine (jammer.bash)
 
@@ -272,9 +272,9 @@ $ timeout 60 python3 sender
 
 ## Trial Site Schedule Management
 
-You can try the programs developed by each group on the trial site.  
-However, if multiple programs uses a failed LAN, the original performance will not be resulted.  
-If you want to run your program on trial site, you must make a reservation before it.  
+Each group can test the developed program on the trial site. 
+However, if multiple programs use the failed LAN simultaneously, the performance will be affected, which could cause it to differ from the actual performance. 
+If you want to use the trial site, you need to make a reservation, so please check it out.  
 
 [Page to make a Reservation](https://calendly.com/rpoc)   
 
