@@ -26,7 +26,7 @@ You can check by logging into Taro, and execute
 ```
 $ ping 169.254.229.153
 ```
-Check if about 50% of packets are lost. If about 50% of packets are lost, then the jammer is on (sample output shown below).
+Let it run for a while, then check if about 50% of packets are lost. If about 50% of packets are lost, then the jammer is on (sample output shown below).
 ```
 pi@Taro:~ $ ping 169.254.229.153
 PING 169.254.229.153 (169.254.229.153) 56(84) bytes of data.
@@ -40,7 +40,8 @@ PING 169.254.229.153 (169.254.229.153) 56(84) bytes of data.
 15 packets transmitted, 5 received, 66.6667% packet loss, time 397ms
 rtt min/avg/max/mdev = 0.845/0.921/0.992/0.063 ms
 ```
-If it was really down, please contact us so we can turn it on again.
+If you let ping run for a while (at least 30 seconds), but still get 0% packet loss, the jammer may be down. 
+Please contact us so we can turn it on again.
 
 ## main.py has 100% accuracy?
 There shouldn't be any data loss since [main.py](./main.py) is an example that shows how you can make your protocol robust, so it's adding headers including checksum, ack number, etc... However, it is robust but slow, so we need to come up with a protocol that can send more files within 60 seconds.
