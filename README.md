@@ -73,7 +73,7 @@ After the time limit, we will check the files that have been saved inside the re
 **[4hour = 240min]** 
 
 - [10min] Opening
-- [60min] Preperation of program and presentation
+- [60min] Preparation of program and presentation
 - [10min] Break
 - [25min per team] For the 5 teams
   - [4min] Operator preparation
