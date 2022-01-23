@@ -4,7 +4,7 @@ Please check this page before asking questions to trainer and tutors.
 
 ## Where will the payload be corrupted at?
 
-It will be corrupted in the physical layer. As written in [challenger.md](./challenger.md), the Jamming Machine will directly inject electrical noise into the LAN cable when it is activated.
+It will be corrupted in the physical layer. Jamming Machine will directly inject electrical noise into the LAN cable when it is activated.
 
 ## Can we apply compression / encoding to the given data?
 
@@ -51,7 +51,7 @@ Please contact trainer and tutors so we can run it again.
 
 ## Does sample program has 100% accuracy?
 
-There shouldn't be any data loss since [main.py](./main.py) is an example that shows how you can make your protocol robust. However, it is slow (cannot transfer much files within 60 seconds), so we need to come up with a protocol that has higher performance.
+There shouldn't be any data loss since sample program is an example that shows how you can make your protocol robust. However, it is slow (cannot transfer much files within 60 seconds), so we need to come up with a protocol that has higher performance.
 
 ## What is the password for sudo?
 
