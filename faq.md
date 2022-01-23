@@ -1,5 +1,7 @@
 # Frequently Asked Questions
 
+Please check this page before asking questions to trainer and tutors.
+
 ## Where will the payload be corrupted at?
 
 It will be corrupted in the physical layer. As written in [challenger.md](./challenger.md), the Jamming Machine will directly inject electrical noise into the LAN cable when it is activated.
@@ -20,15 +22,15 @@ Yes!! You are allowed to use any external libraries!!
 
 If there are requests from multiple teams, we may consider adding new languages.
 
-## Is the Jammer on?
+## How to check if jammer is running or not?
 
-You can check by logging into Taro, and execute 
+You can check by logging into Taro, and run following command.
 
 ```
 $ ping -c 10 169.254.229.153
 ```
 
-Let it run for a while, then check if about 50% of packets are lost. If about 50% of packets are lost, then the jammer is on (sample output shown below).
+If about 50% of packets are lost, then the jammer is running (sample output shown below).
 
 ```
 $ ping -c 10 169.254.229.153
@@ -44,25 +46,29 @@ PING 169.254.229.153 (169.254.229.153) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.839/1.035/1.704/0.336 ms
 ```
 
-If you let ping run for a while (at least 30 seconds), but still get 0% packet loss, the jammer may be down. 
-Please contact us so we can turn it on again.
+If you run `ping` for a while, but still get 0% packet loss, the jammer may be not running. 
+Please contact trainer and tutors so we can run it again.
 
 ## Does sample program has 100% accuracy?
 
-There shouldn't be any data loss since [main.py](./main.py) is an example that shows how you can make your protocol robust, so it's adding headers including checksum, ack number, etc... However, it is robust but slow, so we need to come up with a protocol that can send more files within 60 seconds.
+There shouldn't be any data loss since [main.py](./main.py) is an example that shows how you can make your protocol robust. However, it is slow (cannot transfer much files within 60 seconds), so we need to come up with a protocol that has higher performance.
 
 ## What is the password for sudo?
 
-You can not have root privilege, and it is not necessary to use root privilege in this challenge. Also you do not have to touch [jammer.bash](./jammer.bash).
+You can not have root privilege on Trial Site.
 
-## There is an error "Permission denied (publickey)" when executing XXX
+## There is an error "Permission denied (publickey)" when executing ready.sh on Hanako
 
-If this error occurs when accessing Hanako -> Taro, you need to add Hanako's pubkey to Taro's `~/.ssh/authorized_keys`
+You need to add Hanako's SSH public key to Taro's `~/.ssh/authorized_keys`
 
 ## How do we start building the robust protocol?
 
-You can take a look at [main.py](./main.py), and treat that as a template for building your robust protocol. However, keep in mind that this is robust but very slow, so you will need to make modifications to it.
+Check "Getting Started" on [README.md](./README.md)
 
 ## Can you give me an explanation of the sample code?
 
-The example code splits the given file into really small size chunks, and sends it to the receiver with header (packet type, id, sequence number). You can read the top of [packet.py](./packet.py) for the structure of the header.
+Check [README.md](sample/README.md) inside `sample` directory.
+
+## How can I generate SSH key pair for this challenge?
+
+Use `ssh-keygen` command to generate SSH key pair. In default (entering nothing), SSH public key will be placed at `~/.ssh/id_rsa.pub`.
