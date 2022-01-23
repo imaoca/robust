@@ -86,7 +86,7 @@ After the time limit of 60 seconds, we will check the files that have been saved
 1. Run `git clone https://github.com/imaoca/robust.git` (on both hosts, Taro and Hanako)
 2. Run `cd robust` (on both hosts, Taro and Hanako)
 3. Edit HOST , USER , DIR variables on ready.sh (on Taro) as following:
-  - `HOST` : IP Address of Hanako
+  - `HOST` : `192.168.3.202` (IP Address of Hanako)
   - `USER` : User name of your group account (eg. `group1`)
   - `DIR` : `~/robust/`
 4. Run `sh ./ready.sh` (on Taro)
