@@ -1,4 +1,4 @@
-# Introduction of Robust Protocol Open Challenge
+# Robust Protocol Open Challenge
 
 ## GCC 2022 Taiwan  
 
