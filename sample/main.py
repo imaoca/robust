@@ -10,13 +10,13 @@ def main():
         try:
             # serial
             for id in range(0, 1000):
-                scu.send(f"./data/data{id}", id)
+                scu.send(f"../data/data{id}", id)
                 print(f"file sent: {id}", end="\r")
 
             # parallel
             # threads = []
             # for id in range(0, 1000):
-            #     threads.append(threading.Thread(target = scu.send(f"data/data{id}", id)))
+            #     threads.append(threading.Thread(target = scu.send(f"../data/data{id}", id)))
             #     threads[-1].setDaemon(True)
             #     threads[-1].start()
 
@@ -32,7 +32,7 @@ def main():
         scu.bind_as_receiver(receiver_address = ("169.254.155.219", 8888))
         for i in range(0, 1000):
             filedata = scu.recv()
-            utils.write_file(f"./data/data{i}", filedata)
+            utils.write_file(f"../data/data{i}", filedata)
             print(f"file received: {i}", end="\r")
 
 if __name__ == '__main__':
