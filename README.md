@@ -13,17 +13,17 @@ It jams communication by injecting electrical noise into the cables.
 The noise pattern and timing are programmable, and currently it is adjusted to about 50% packet loss according to result of `ping` command.
 
 ```plaintext
-$ ping -c 10 169.254.229.153
-PING 169.254.229.153 (169.254.229.153) 56(84) bytes of data.
-64 bytes from 169.254.229.153: icmp_seq=1 ttl=64 time=1.70 ms
-64 bytes from 169.254.229.153: icmp_seq=4 ttl=64 time=0.902 ms
-64 bytes from 169.254.229.153: icmp_seq=6 ttl=64 time=0.861 ms
-64 bytes from 169.254.229.153: icmp_seq=8 ttl=64 time=0.872 ms
-64 bytes from 169.254.229.153: icmp_seq=9 ttl=64 time=0.839 ms
+$ ping -c 10 hanako
+PING hanako (169.254.229.153) 56(84) bytes of data.
+64 bytes from hanako (169.254.229.153): icmp_seq=1 ttl=64 time=0.842 ms
+64 bytes from hanako (169.254.229.153): icmp_seq=3 ttl=64 time=0.733 ms
+64 bytes from hanako (169.254.229.153): icmp_seq=5 ttl=64 time=0.695 ms
+64 bytes from hanako (169.254.229.153): icmp_seq=9 ttl=64 time=0.717 ms
+64 bytes from hanako (169.254.229.153): icmp_seq=10 ttl=64 time=0.716 ms
 
---- 169.254.229.153 ping statistics ---
-10 packets transmitted, 5 received, 50% packet loss, time 245ms
-rtt min/avg/max/mdev = 0.839/1.035/1.704/0.336 ms
+--- hanako ping statistics ---
+10 packets transmitted, 5 received, 50% packet loss, time 274ms
+rtt min/avg/max/mdev = 0.695/0.740/0.842/0.060 ms
 ```
 
 ## Robust Protocol Open Challenge Trial Site
@@ -44,8 +44,8 @@ Currently, following languages can be used to implement the protocol.
 
 ![Figure 4](img/fig4_new.png) 
 
-**Hanako's eth1 IP address can change.  
-Now it's 192.168.3.8.**
+**Hanako's eth1 IP address is 192.168.3.202**  
+**TBD: Update diagram**
 
 ### Photo of Trial Site
 
