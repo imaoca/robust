@@ -42,10 +42,7 @@ Currently, following languages can be used to implement the protocol.
 
 ### Diagram of Trial Site
 
-![Figure 4](img/fig4_new.png) 
-
-**Hanako's eth1 IP address is 192.168.3.202**  
-**TBD: Update diagram**
+![Figure 4](img/fig4.png)
 
 ### Photo of Trial Site
 
