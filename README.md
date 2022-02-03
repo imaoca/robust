@@ -40,6 +40,12 @@ Currently, following languages can be used to implement the protocol.
 - Rust  
 - NodeJS v14.15.4 (npm v6.14.10)
 
+Please keep in mind that on Trial Site, you are prohibited to take following actions:
+
+- Any works that is not related to this lecture
+- Running heavy program (like vscode remote)
+    - Use light-weight editor like `vim`
+
 ### Diagram of Trial Site
 
 ![Figure 4](img/fig4.png)
