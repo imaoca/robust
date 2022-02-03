@@ -28,7 +28,7 @@ find ./ -type f | xargs grep 192.168.3
 
 ## ファイル
 
-### blink.c
+### jammer.c
 
 ジャマ―を実行するためのプログラムのソースコード。以下のようにしてコンパイルして実行しましょう。
 
@@ -37,15 +37,15 @@ find ./ -type f | xargs grep 192.168.3
 $ wget https://project-downloads.drogon.net/wiringpi-latest.deb
 $ sudo dpkg -i wiringpi-latest.deb
 # コンパイル・実行
-$ gcc -Wall -o blink blink.c -lwiringPi
-$ ./blink
+$ gcc -Wall -o jammer jammer.c -lwiringPi
+$ ./jammer
 ```
 
 ### jammer.bash
 
 **注意：現在は使われていません。**
 
-ジャマーを実行するためのBashスクリプト。 `blink.c` への移行に伴い使われなくなりました。実行するにはroot権限が必要です。
+ジャマーを実行するためのBashスクリプト。 `jammer.c` への移行に伴い使われなくなりました。実行するにはroot権限が必要です。
 
 ```sh
 # 実行例
