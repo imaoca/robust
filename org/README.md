@@ -28,13 +28,28 @@ find ./ -type f | xargs grep 192.168.3
 
 ## ファイル
 
+### jammer.c
+
+ジャマ―を実行するためのプログラムのソースコード。以下のようにしてコンパイルして実行しましょう。
+
+```
+# WiringPiのダウンロード・インストール
+$ wget https://project-downloads.drogon.net/wiringpi-latest.deb
+$ sudo dpkg -i wiringpi-latest.deb
+# コンパイル・実行
+$ gcc -Wall -o jammer jammer.c -lwiringPi
+$ ./jammer
+```
+
 ### jammer.bash
 
-ジャマーを起動するためのBashスクリプト。実行するにはroot権限が必要です。
+**注意：現在は使われていません。**
+
+ジャマーを実行するためのBashスクリプト。 `jammer.c` への移行に伴い使われなくなりました。実行するにはroot権限が必要です。
 
 ```sh
 # 実行例
-sudo nohup bash ./jammer.bash &
+$ sudo bash ./jammer.bash
 ```
 
 ### setupEth0.sh / setupEth1.sh

@@ -1,7 +1,7 @@
 /*
 $ wget https://project-downloads.drogon.net/wiringpi-latest.deb
 $ sudo dpkg -i wiringpi-latest.deb
-$ gcc -Wall -o blink blink.c -lwiringPi
+$ gcc -Wall -o jammer jammer.c -lwiringPi
 */
 
 #include <wiringPi.h>
