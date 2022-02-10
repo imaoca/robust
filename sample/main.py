@@ -24,7 +24,7 @@ def main():
             #     th.join()
         except Exception as e:
             print(e)
-            scu.drop() # なくても大丈夫だとは思うけど一応安全のため
+            scu.drop() # We do not think its required, but just to make sure.
 
     elif sys.argv[1] == "receiver":
         # TODO
