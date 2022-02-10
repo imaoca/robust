@@ -57,18 +57,18 @@ class SCU:
                     self.connection_manager[packet.header.id].put((True, packet.header.seq))
                 elif packet.header.typ == SCUPacketType.Rtr.value:
                     self.connection_manager[packet.header.id].put((False, packet.header.seq))
-            except Exception as e: # recvが失敗した時とputが失敗した時は(適当)
+            except Exception as e: # When recv or put failed:
                 if e == KeyboardInterrupt:
                     raise KeyboardInterrupt
                 else:
                     import traceback
                     traceback.print_exc()
 
-    def send(self, filepath, id): # will lock the thread
+    def send(self, filepath, id): # Will lock the thread
         if self.mode == SCUMode.RecvMode:
             raise Exception
         queue = Queue()
-        self.connection_manager[id] = queue # コネクションを登録
+        self.connection_manager[id] = queue # Register the connection
 
         data_fragments = utils.split_file_into_mtu(filepath, self.mtu)
 
@@ -86,30 +86,30 @@ class SCU:
 
             all_packets.append(packet)
 
-        retransmit_seq = 0 # 再送の必要があるパケットを管理(どこまで受け取れてるか)
+        retransmit_seq = 0 # Manage the packets which needs retransmission (how much is it received correctly)
         seq = 0
         while True:
             try:
                 while True:
                     try:
-                        fin, sq = queue.get(block=False) # 再送要求か受信完了報告か
+                        fin, sq = queue.get(block=False) # Retransmission Request or Transmission Done Report
                         if fin: # 送信完了
-                            del(self.connection_manager[id]) # コネクションを解除
+                            del(self.connection_manager[id]) # Remove connection
                             return
-                        elif sq < len(all_packets): # 再送要求
+                        elif sq < len(all_packets): # Retransmission Request
                             retransmit_seq = max(sq, retransmit_seq)
-                    except Exception as e: # キューが空の時
+                    except Exception as e: # When queue is empty:
                         if e == KeyboardInterrupt:
                             raise KeyboardInterrupt
                         else:
                             break
-                with self.lock: # 複数のsendメソッドが並列に同時実行されている可能性があるため，ロックが必要
-                    self.socket.sendto(all_packets[seq].raw(), self.receiver_address) # パケット送信
+                with self.lock: # Multiple send method might be running in parallel, so lock is required.
+                    self.socket.sendto(all_packets[seq].raw(), self.receiver_address) # Send packet
 
-                seq = max(seq + 1, retransmit_seq) # seq更新
+                seq = max(seq + 1, retransmit_seq) # Update seq
                 if seq >= len(all_packets):
                     seq = retransmit_seq
-            except Exception as e: # sendtoが失敗した時は(適当)
+            except Exception as e: # When sendto has failed:
                 if e == KeyboardInterrupt:
                     raise KeyboardInterrupt
                 else:
@@ -144,14 +144,14 @@ class SCU:
 
                     self.received_files_data[key][packet.header.seq] = packet.payload
                     rtr = self.calculate_rtr(key, packet.header.seq)
-                    if rtr is not None: # 再送要求する必要あり
+                    if rtr is not None: # Need to send retransmission request
                         self.response(SCUPacketType.Rtr.value, from_addr, packet.header.id, rtr)
-                    elif key in received_files_length and self.is_all_received(key, received_files_length[key]): #  ファイル受信完了
+                    elif key in received_files_length and self.is_all_received(key, received_files_length[key]): # Received file:
                         received_files_flag[key] = True
                         self.response(SCUPacketType.Fin.value, from_addr, packet.header.id, 0)
                         self.file_received.put((key, received_files_length[key]))
 
-            except Exception as e: # recvが失敗した時とputが失敗した時は(適当)
+            except Exception as e: # When recv or put failed:
                 if e == KeyboardInterrupt:
                     raise KeyboardInterrupt
                 else:
