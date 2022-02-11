@@ -72,3 +72,8 @@ Check [README.md](sample/README.md) inside `sample` directory.
 ## How can I generate SSH key pair for this challenge?
 
 Use `ssh-keygen` command to generate SSH key pair. In default (entering nothing), SSH public key will be placed at `~/.ssh/id_rsa.pub`.
+
+## How to deal the error `OSError: [Errno 98] Address already in use`
+
+That address (and port) is being used because of somehow reason.
+Change the port number used inside your program.

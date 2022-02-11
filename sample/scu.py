@@ -93,7 +93,7 @@ class SCU:
                 while True:
                     try:
                         fin, sq = queue.get(block=False) # Retransmission Request or Transmission Done Report
-                        if fin: # 送信完了
+                        if fin: # Transmission is done:
                             del(self.connection_manager[id]) # Remove connection
                             return
                         elif sq < len(all_packets): # Retransmission Request
